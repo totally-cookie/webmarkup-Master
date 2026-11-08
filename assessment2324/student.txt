@@ -2,4 +2,4 @@ Student name: Mika Moleman
 Student number: 760435
 Student class: INF1B
 GitHub Repository: https://github.com/totally-cookie/webmarkup-Master
-GitHub Pages URL: https://totally-cookie.github.io/webmarkup-Master/
+GitHub Pages URL: https://totally-cookie.github.io/webmarkup-Master/assessment2324/
