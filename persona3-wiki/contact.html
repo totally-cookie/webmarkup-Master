@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Persona 3 Reload Wiki - Contact</title>
+    <meta name="author" content="Mika Moleman" />
+    <meta name="description" content="Neem contact op met het beheerteam van de Persona 3 Reload Wiki voor suggesties of fouten in de database." />
+    <meta name="keywords" content="Persona, Contact, Formulier, Database, Wiki" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/mainstyle.css" />
+</head>
+<body>
+
+    <header>
+        <nav class="nav-balk">
+            <img src="img/logo.png" alt="P3 Wiki Logo" class="header-logo" />
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="verhaal.html">Het Verhaal</a></li>
+                <li><a href="karakters.html">S.E.E.S. Karakters</a></li>
+                <li><a href="personas.html">Personas</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contact.html" class="active-page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h1>Contact met het Wiki Beheerteam</h1>
+            <p>Heeft u een fout ontdekt in de database of heeft u suggesties voor nieuwe tabellen? Vul het onderstaande formulier volledig in. Velden met een asterisk (*) zijn verplicht.</p>
+
+            <form method="post" action="">
+                
+                <p>
+                    <label for="aanhef">Geachte *:</label>
+                    <select id="aanhef" name="aanhef" required>
+                        <option value="" disabled selected>Maak uw keuze...</option>
+                        <option value="meneer">Meneer</option>
+                        <option value="mevrouw">Mevrouw</option>
+                        <option value="anders">Anders</option>
+                    </select>
+                </p>
+
+
+                <!-- Volledige naam -->
+                <p>
+                    <label for="naam">Volledige naam *:</label>
+                    <input type="text" id="naam" name="naam" placeholder="Uw naam hier" required />
+                </p>
+
+                <!-- E-mailadres -->
+                <p>
+                    <label for="email">E-mailadres *:</label>
+                    <input type="email" id="email" name="email" placeholder="Uw e-mailadres hier" required />
+                </p>
+
+                <!-- Bericht / Feedback -->
+                <p>
+                    <label for="bericht">Bericht / Feedback *:</label>
+                    <textarea id="bericht" name="bericht" rows="6" placeholder="Typ hier uw bericht..." required></textarea>
+                </p>
+
+                <!-- De verzendknop -->
+                <p>
+                    <input type="submit" value="VERZENDEN" class="submit-btn" />
+                </p>
+
+            </form>
+        </section>
+
+        <aside id="cookie-melding">
+            <p><strong>Cookies:</strong> Deze website gebruikt basis-cookies voor het InHolland project.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <img src="img/logo.png" alt="P3 Wiki Logo Footer" class="footer-logo" />
+        <p>&copy; 2026 Persona 3 Wiki | InHolland Haarlem</p>
+    </footer>
+
+</body>
+</html>

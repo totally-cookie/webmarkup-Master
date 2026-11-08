@@ -1,0 +1,510 @@
+@import url('https://googleapis.com');
+
+.home-container, .karakter-container, .verhaal-container, .form-container, .quiz-container, .database-page-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+body {
+    background-color: #0F172A;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    
+    line-height: 1.5em;
+    word-spacing: 0.05em;
+    letter-spacing: 0.02em;
+    text-indent: 0.5em;
+    
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+    color: #38BDF8;
+}
+
+p::first-letter {
+    font-size: 1.1em;
+}
+
+header {
+    background-color: #1E293B;
+    padding: 1rem;
+    position: static;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 1.5rem;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #38BDF8;
+}
+
+a:active {
+    color: #0EA5E9;
+}
+
+main {
+    border-color: #1E293B;
+    border-style: solid;
+    border-width: 2px;
+    padding: 2rem;
+}
+
+#cookie-melding {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1E293B;
+    z-index: 9999;
+    text-align: center;
+    border-top: 2px solid #38BDF8;
+}
+
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    nav ul {
+        flex-direction: row;
+    }
+}
+
+/* personas pagina */
+
+.database-container > table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.database-container th, 
+.database-container td {
+    padding: 0.8rem 1rem;
+    border: 1px solid #38BDF8;
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+}
+
+.database-container th {
+    background-color: #1E293B;
+    color: #38BDF8;
+    border-width: 2px;
+}
+
+.database-container tbody tr:nth-child(even) {
+    background-color: #1E293B;
+}
+
+.database-container tbody tr:nth-child(odd) {
+    background-color: #0F172A;
+}
+
+/* contact pagina */
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-container label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1E293B;
+    border: 1px solid #38BDF8;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.form-container select {
+    cursor: pointer;
+}
+
+.form-container select option {
+    background-color: #1E293B;
+    color: #FFFFFF;
+}
+
+.submit-btn {
+    background-color: #38BDF8;
+    color: #0F172A;
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 2rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #0EA5E9;
+}
+
+/* quiz pagina */
+
+.quiz-blok {
+    background-color: #1E293B;
+    border: 1px solid #38BDF8;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-blok h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #38BDF8;
+    font-family: 'Impact', sans-serif;
+}
+
+.quiz-blok ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.quiz-blok li {
+    margin-bottom: 0.5rem;
+}
+
+.quiz-blok input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.quiz-blok input[type="radio"] + label {
+    width: 100%;
+    background-color: #0F172A;
+    border: 1px solid #38BDF8;
+    color: #FFFFFF;
+    padding: 0.75rem 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.quiz-blok input[type="radio"] + label:hover {
+    background-color: #1E293B;
+}
+
+
+/* goed antwoord wordt groen */
+input.correct-input:checked + label {
+    background-color: #22C55E;
+    border-color: #4ADE80;
+    color: #FFFFFF;
+}
+
+/* fout antwoord wordt roof */
+input.wrong-input:checked + label {
+    background-color: #EF4444;
+    border-color: #F87171;
+    color: #FFFFFF;
+}
+
+/* verhaal pagina */
+
+.verhaal-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.verhaal-sectie {
+    background-color: #1E293B;
+    border: 1px solid #38BDF8;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.verhaal-sectie h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+.verhaal-sectie h3 {
+    color: #38BDF8;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+.verhaal-foto {
+    margin: 1.5rem 0 0 0;
+    text-align: center;
+}
+
+.verhaal-foto img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #38BDF8;
+}
+
+.verhaal-foto figcaption {
+    font-size: 0.85rem;
+    color: #38BDF8;
+    margin-top: 0.5rem;
+}
+
+.verhaal-sectie-Groot {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.verhaal-foto-groot {
+    margin: 0;
+    text-align: center;
+}
+
+.verhaal-foto-groot img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #38BDF8;
+}
+
+.verhaal-foto-groot figcaption {
+    font-size: 0.9rem;
+    color: #38BDF8;
+    margin-top: 0.5rem;
+}
+
+/* home pagina */
+
+.home-container, .karakter-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.home-blok {
+    background-color: #1E293B;
+    border: 1px solid #38BDF8;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-foto, .cta-banner, .groeps-header {
+    margin: 1.5rem 0 0 0;
+    text-align: center;
+}
+
+.home-foto img, .cta-banner img, .groeps-header img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #38BDF8;
+}
+
+.home-foto figcaption, .cta-banner figcaption, .groeps-header figcaption {
+    font-size: 0.85rem;
+    color: #38BDF8;
+    margin-top: 0.5rem;
+}
+
+.home-cta {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #38BDF8;
+    color: #0F172A;
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    padding: 1rem 2rem;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.cta-button:hover {
+    background-color: #0EA5E9;
+}
+
+@media screen and (min-width: 769px) {
+    .home-blok {
+        flex-direction: row;
+        align-items: center;
+    }
+    .home-content {
+        flex: 1;
+        padding-right: 2rem;
+    }
+    .home-foto {
+        flex: 1;
+        margin: 0;
+    }
+}
+
+/* karakters pagina */
+
+.karakter-sectie {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.karakter-sectie h2 {
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+    color: #38BDF8;
+    font-size: 1.8rem;
+    border-bottom: 1px solid #1E293B;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.karakter-kaart {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+.karakter-kaart figure {
+    margin: 0 1.5rem 0 0;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.karakter-kaart img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border: 1px solid #38BDF8;
+    display: block;
+}
+
+.karakter-kaart figcaption {
+    font-size: 0.75rem;
+    color: #38BDF8;
+    margin-top: 0.3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.karakter-kaart p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4em;
+    text-indent: 0;
+}
+
+.karakter-kaart p strong {
+    color: #38BDF8;
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+}
+
+.karakter-tekst {
+    display: flex;
+    flex-direction: column;
+}
+
+.karakter-tekst h3 {
+    margin: 0 0 0.3rem 0;
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+    color: #38BDF8;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+}
+
+.karakter-kaart p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4em;
+    text-indent: 0;
+}
+
+
+/* logo header */
+.nav-balk {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    height: 50px;
+    width: auto;
+    border: 1px solid #38BDF8;
+}
+
+.nav-balk ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1E293B;
+    margin-top: 3rem;
+}
+
+.footer-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 1rem;
+    border: 1px solid #38BDF8;
+}
+
+/* active button */
+a.active-page {
+    color: #38BDF8;
+    font-weight: bold;
+    border-bottom: 2px solid #38BDF8;
+    padding-bottom: 4px;
+}
